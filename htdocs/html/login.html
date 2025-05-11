@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miss Sweet Mimi - Login</title>
+    <link rel="stylesheet" href="../css/login.css" type="text/css">
+    <script>
+        function validarContraseñas() {
+            var contraseña = document.getElementById("contraseña").value;
+            var repiteContraseña = document.getElementById("repiteContraseña").value;
+
+            if (contraseña !== repiteContraseña) {
+                alert("Las contraseñas no coinciden. Por favor, inténtalo de nuevo.");
+                return false; // Evita que el formulario se envíe
+            }
+            return true; // Continúa con el envío del formulario
+        }
+    </script>
+</head>
+<body>     
+    <header>
+        <div class="cabecera">  
+            <div class="fondo-cabezera">
+                <img src="../img/cabecera.jpg" class="fondo-cabezera" alt="fondo-cabezera">
+            </div>
+            <div class="titulo">
+                <a href="../index.html" class="titulo">Miss Sweet Mimi</a>
+            </div>
+            <div class="eslogan">
+                <p class="eslogan">Despierta A Tu Diosa Interior</p>
+            </div>
+            <nav>
+                <div class="conoceme">
+                    <a class="menu" href="Quien_soy.html">Quién soy</a>
+                </div>
+                <div class="Galeria1">
+                    <a class="menu" href="Galeria.html">Galeria</a>
+                </div>
+                <div class="Clases">
+                    <a class="menu" href="login.html">Identifícate</a>
+                </div>
+                <div class="eventos">
+                    <a class="menu" href="Eventos.html">Eventos</a>
+                </div>
+                <div class="eventos">
+                    <a class="menu" href="TusEventos.html">Tus eventos</a>
+                </div>
+                <div class="contacta">
+                    <a class="menu" href="Contacto.html">Contacto</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="centro">
+        <div>
+            <p class="registrate">Por favor, regístrate</p>
+        </div>
+        <div class="linea">
+            <hr>
+        </div>
+        <div>
+            <form id="registroForm" action="../php/procesar_registro.php" method="post" onsubmit="return validarContraseñas();">
+                <div>
+                    <h1 class="contactar-nombre">Nombre</h1>
+                    <input class="contactar" type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div>
+                    <h1 class="contactar-apellidos">Apellidos</h1>
+                    <input class="contactar" type="text" id="apellidos" name="apellidos" placeholder="Ingresa tus apellidos" required>
+                </div>
+                <div>
+                    <h1 class="contactar-email">Correo electrónico</h1>
+                    <input class="contactar" type="email" id="mail" name="mail" placeholder="Ingresa tu e-mail" required>
+                </div>
+                <div>
+                    <h1 class="contactar-contrasenya">Escribe una contraseña</h1>
+                    <input class="contactar" type="password" id="contraseña" name="contraseña" placeholder="Ingresa una contraseña" required>
+                </div>
+                <div>
+                    <h1 class="contactar-Rep-contrasenya">Repite la contraseña</h1>
+                    <input class="contactar" type="password" id="repiteContraseña" name="repiteContraseña" placeholder="Vuelve a ingresar la contraseña" required>
+                </div>
+                <div>
+                    <h1 class="contactar-DNI">Escribe tu DNI</h1>
+                    <input class="contactar" type="text" id="dni" name="dni" placeholder="Ingresa tu DNI" required>
+                </div>
+                <div>
+                    <input class="contactar-enviar" type="submit" value="Registrarse">
+                </div>
+            </form>
+        </div> 
+        <div>
+            <p class="identificate">Por favor, identifícate</p>
+        </div>
+        <div class="linea2">
+            <hr>
+        </div>
+        <div>
+            <form id="loginForm" action="../php/procesar_login.php" method="post">
+                <div>
+                    <h1 class="contactar2-usuario">Correo electrónico</h1>
+                    <input class="contactar2" type="text" id="mail" name="mail" placeholder="Ingresa tu correo electrónico" required>
+                </div>
+                <div>
+                    <h1 class="contactar2-contrasenya">Contraseña</h1>
+                    <input class="contactar2" type="password" id="contraseñaUsuario" name="contraseñaUsuario" placeholder="Ingresa tu contraseña" required>
+                </div>
+                <div>
+                    <input class="iniciar-sesion" type="submit" value="Iniciar Sesión">
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="pie">
+            <div class="tipo1">
+                <p class="tipo1">Copyright © 2023 <a class="tipo1" href="../index.html">Miss Sweet Mimi</a></p>
+            </div>
+            <div>
+                <img src="../img/Logo_Miss_Sweet_Mimi_Derecha.png" class="logo-grande" width="151" height="151" alt="Logo Grande">
+            </div>
+        </div>
+        <a href="login.html" class="btn-flotante"> ▲ </a>
+    </footer>
+</body>
+</html>

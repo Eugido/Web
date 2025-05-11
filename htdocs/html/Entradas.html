@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miss Sweet Mimi - Compra de entradas</title>
+    <link rel="stylesheet" href="../css/Entradas.css" type="text/css">
+</head>
+<body>     
+    <header>
+        <div class="cabecera">    
+            <div class="fondo-cabezera">
+                <img src="../img/cabecera.jpg" class="fondo-cabezera" alt="fondo-cabezera">
+            </div>
+            <div class="titulo">
+                <a href="../index.html" class="titulo">Miss Sweet Mimi</a>
+            </div>
+            <div class="eslogan">
+                <p class="eslogan">Despierta A Tu Diosa Interior</p>
+            </div>
+            <nav>
+                <div class="conoceme">
+                    <a class="menu" href="Quien_soy.html">Quién soy</a>
+                </div>
+                <div class="Galeria1">
+                    <a class="menu" href="Galeria.html">Galeria</a>
+                </div>
+                <div class="Clases">
+                    <a class="menu" href="login.html">Identifícate</a>
+                </div>
+                <div class="eventos">
+                    <a class="menu" href="Eventos.html">Eventos</a>
+                </div>
+                <div class="eventos">
+                    <a class="menu" href="TusEventos.html">Tus eventos</a>
+                </div>
+                <div class="contacta">
+                    <a class="menu" href="Contacto.html">Contacto</a>
+                </div>
+            </nav>
+            
+        </div>
+    </header>
+    <div class="centro">
+        <div class="titulo2">
+            <p class="titulo2">Contrata tu evento</p>
+        </div>
+        <div class="linea">
+            <hr>
+        </div>
+        <body>
+            <div id="evento-detalles">
+                <p>Cargando detalles del evento...</p>
+            </div>
+        </body>
+    </div>
+    <div>
+        <img src="../img/Logo_Miss_Sweet_Mimi_Derecha.png" class="logo-grande" width="151" height="151" alt="Logo Grande">
+    </div>
+    <footer>
+        <div class="pie">
+            <div class="tipo1">
+                <p class="tipo1">Copyright © 2023 <a class="tipo1" href="../index.html">Miss Sweet Mimi</a></p>
+            </div>
+
+        </div>
+        <a href="Contacto.html" class="btn-flotante"> ▲ </a>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const eventId = params.get("event_id");
+
+            if (!eventId) {
+                document.getElementById("evento-detalles").innerHTML = "<p>Error: Evento no encontrado.</p>";
+                return;
+            }
+
+            fetch(`../php/obtener_evento.php?event_id=${eventId}`)
+                .then(response => response.json())
+                .then(evento => {
+                    if (evento.error) {
+                        document.getElementById("evento-detalles").innerHTML = `<p>${evento.error}</p>`;
+                        return;
+                    }
+
+                    document.getElementById("evento-detalles").innerHTML = `
+                        <div class='evento'>
+                            <img src="${evento.url_image}" alt="${evento.event_name}" class="evento-imagen">
+                            <h2>${evento.event_name}</h2>
+                            <p><strong>Descripción:</strong> ${evento.event_description}</p>
+                            <p><strong>Fecha:</strong> ${evento.event_date}</p>
+                            <p><strong>Tipo:</strong> ${evento.event_type}</p>
+                            <p><strong>Duración:</strong> ${evento.duration} minutos</p>
+                            <p><strong>Precio:</strong> €${evento.price}</p>
+                            <button id="comprar-btn">Comprar Entrada</button>
+                        </div>
+                    `;
+
+                    document.getElementById("comprar-btn").addEventListener("click", function () {
+                        fetch("../php/registrar_evento.php", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({ event_id: eventId })
+                        })
+                        .then(response => response.json())
+                        .then(result => {
+                            if (result.success) {
+                                window.location.href = "../html/Gracias-entradas.html";
+                            } else {
+                                window.location.href = "../html/LoSiento-Pago.html";
+                            }
+                        })
+                        .catch(error => {
+                            console.error("Error al registrar la compra:", error);
+                            window.location.href = "LoSientoPago.html";
+                        });
+                    });
+                })
+                .catch(error => console.error("Error:", error));
+        });
+    </script>
+</body>
+</html>
