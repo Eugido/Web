@@ -1,0 +1,378 @@
+.cabecera{
+	background-color: #F7F7F7;
+	background-attachment: scroll;
+	margin: -5px -5px;
+  	width: 1900px;
+	height: 170px;
+}
+
+.fondo-cabezera{
+	-moz-opacity:.80;opacity:.80;
+	background-repeat: no-repeat;
+	background-color: #F7F7F7;
+	background-attachment: scroll;
+	position: relative;
+	left: 4px;
+	top: 0px;
+	margin: -5px -5px;
+  	width: 1901px;
+	height: 170px;
+}
+
+.centro {
+    /*background-image: url("../img/evento.png");*/
+    background-repeat: no-repeat;
+    background-color: #F7F7F7;
+    position: relative;
+    left: 0px;
+    top: 15px;
+    margin: -20px -8px;
+    width: 1902px;
+    height: auto; /* Se ajustará al contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px; /* Espacio al final */
+}
+
+.pie{
+	background-color: #111111;
+	position: relative;
+	left: -7px;
+	top: 10px;
+	margin-top: 30px;
+  	width: 1901px;
+	height: 30px;
+}
+/*Propiedades del título*/
+	/* Titulo*/
+	.titulo {
+		background-color: transparent;
+		position: absolute;
+		left: 25px;
+		top: 25px;
+		border: none;
+		color: white;
+		padding: 10px 1px;
+		text-decoration: none;
+		display: block;
+		font-size: 35px;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		font-weight: bold; 
+	}
+		/*Enlace titulo*/
+	a.titulo {
+		color: white;
+		font-size: 35px;
+		top: 0px;
+		position: relative;
+		
+	}
+		/* Quito la linea al enlace*/
+	a:link.titulo {
+		  text-decoration: none;
+	}
+		/*Asigno una transicion a gris al título*/
+	a:hover.titulo {
+		  color: grey;
+		  cursor: pointer;
+		  transition-duration: 0.8s;
+	}
+/*Propiedades de eslogan*/
+p.eslogan {
+	color: white;
+  	position: absolute;
+	height: 20px;
+	width: 300px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 20px;
+  	top: 70px;
+  	left: 20px;
+  	margin-left: 40px;
+}
+
+.tipo1 {
+	top: 2px;
+	left: 10px;
+	position: relative;
+	background-color: transparent;
+	margin: 0px 415px;
+	padding: 0px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  	font-size: 15px;
+	color: #7F7F7F;
+}
+	/*Quitar decoracion del enlace y cuadrar enlace con texto*/
+a:link.tipo1 {
+	top: 0px;
+	position: relative;
+  	text-decoration: none;
+}
+	/*Transición al paso del ratón*/
+a:hover.tipo1 {
+  	color: #7F7F7F;
+  	cursor: pointer;
+	text-decoration: underline;
+}
+	/*Tipo de texto del enlace*/
+a.tipo1 {
+  	color: #7F7F7F;
+  	font-size: 15px;
+	margin: 0px 0px;
+	
+}
+/*Falso retorno arriba*/
+	/*Características de botón*/
+.btn-flotante {
+	color: grey; 
+	text-decoration: none;
+	border-radius: 2px; 
+	background-color: transparent;
+	padding: 15px 15px;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	transition: all 300ms ease 0ms;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+	z-index: 99;
+}
+	/*Transición al paso del ratón*/
+.btn-flotante:hover {
+	background-color: transparent;
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+	transform: translateY(-7px);
+	color:black;
+}
+
+.menu{
+	color: white;
+	display:block;
+	height: 20px;
+	width: 150px;
+	margin: 20px 20px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 20px;
+    top: -110px;
+	left: 450px;
+	font-weight: bold; 
+    position: relative;
+}
+	/*Quitar decoración del enlace*/
+a:link.menu {
+	text-decoration: none;
+}
+	/*Transiciin de los enlaces al paso del ratón*/
+.menu:hover {
+	color: rgb(197, 57, 57);
+	cursor: pointer;
+	transition-duration: 0.5s;
+}
+
+.Galeria1{
+	background-color: transparent;
+	position: relative;
+	display: block;
+	border: none;
+	color: white;
+  	padding: 12px 1px;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 25px;
+  	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  	font-weight: bold; 
+}
+
+.Clases{
+	background-color:transparent;
+	position: relative;
+	display: block;
+	border: none;
+	color: white;
+  	padding: 12px 1px;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 25px;
+  	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  	font-weight: bold; 
+}
+
+.eventos{
+	background-color: transparent;
+	position: relative;
+	display: block;
+	border: none;
+	color: white;
+  	padding: 12px 1px;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 25px;
+  	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  	font-weight: bold; 
+}
+
+.contacta{
+	background-color:transparent;
+	position: relative;
+	display: block;
+	border: none;
+	color: white;
+  	padding: 12px 1px;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 25px;
+  	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  	font-weight: bold; 
+}
+
+.conoceme{
+	background-color: transparent;
+	position: relative;
+	display: block;
+	border: none;
+	color: white;
+  	padding: 12px 1px;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 25px;
+  	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  	font-weight: bold; 
+}
+
+.logo-grande {
+	top: 55px;
+	left: 1711px;
+	margin-left: 20px;
+	position: absolute;
+}
+
+p.titulo2{
+	color: black;
+  	background-color:transparent;
+  	margin: 0px 0px;
+	top: 49px;
+	position: relative;
+	left: 0px;
+	margin: 0px 0px;
+  	width: 1903px;
+	height: 30px;
+  	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  	font-size: 30px;
+  	text-align: center;
+  	font-weight: bold;
+}
+
+.linea{
+	position: relative;
+	background-color:transparent;
+	left: 0px;
+	top: 79px;
+	margin: 0px 0px;
+  	width: 1903px;
+	height: 30px;
+	margin: 30px 70px;
+	width: 93%;
+}
+
+p.parrafo {
+	color: #7F7F7F;
+	position: relative;
+	top: 100px;
+	left: 0px;
+	padding: 0px 80px;
+	text-align: center;
+	width: 1700px;
+  	background-color:transparent;
+  	margin: 0px 0px;
+  	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  	font-size: 25px;
+  	text-align: justify;
+}
+
+.imagen {
+	width: 700px;
+	position: relative;
+	top: -100px;
+	left: 100px;
+}
+
+.Texto-clases {
+	width: 500px;
+	position: relative;
+	text-decoration: none;
+	color: #7F7F7F;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  	font-size: 70px;
+	top: 350px;
+	left: 1126px;
+}
+
+/* Ajustar altura del body */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hacer que el main ocupe el espacio necesario */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor de eventos */
+.events {
+	color: #7F7F7F;
+  	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  	font-size: 25px;
+	margin-top: 140px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+/* Tarjeta de evento */
+.evento {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.evento:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de cada evento */
+.evento-imagen {
+    width: 100%;
+    height: 220px; /* Tamaño uniforme para todas las imágenes */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Título del evento */
+.evento-titulo {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0 10px;
+    color: #333;
+}
+
+/* Descripción del evento */
+.evento-descripcion {
+    font-size: 16px;
+    color: #666;
+    padding: 0 10px;
+}
+
+
