@@ -1,0 +1,6 @@
+- Descargar XAMPP --> https://www.apachefriends.org/es/download.html
+- Instalar XAMPP. (seleccionar todas las celdas).
+- Copiar todos los archivos a la carpeta htdocs de XAMPP.
+- Copiar el archivo sendmail.ini en la carpeta de sendmail y reenplazarlo.
+- Copiar archivo php.ini a la carpeta php y reemplazarlo.
+- Arrancar XAMPP y arrancar Apache y MySQL.
